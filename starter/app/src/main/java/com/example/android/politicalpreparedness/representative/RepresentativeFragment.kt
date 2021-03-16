@@ -1,3 +1,4 @@
+/*
 package com.example.android.politicalpreparedness.representative
 
 import android.content.Context
@@ -69,4 +70,4 @@ class DetailFragment : Fragment() {
         imm.hideSoftInputFromWindow(view!!.windowToken, 0)
     }
 
-}
+}*/

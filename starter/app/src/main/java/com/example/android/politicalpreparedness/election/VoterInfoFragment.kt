@@ -9,7 +9,7 @@ class VoterInfoFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
+        return super.onCreateView(inflater, container, savedInstanceState)
         //TODO: Add ViewModel values and create ViewModel
 
         //TODO: Add binding values
