@@ -18,7 +18,7 @@ interface ElectionDao {
     fun getElections(): LiveData<List<Election>>
 
     @Query("select * from election_table where id = :id")
-    fun getElection(id: Int): LiveData<Election>
+    fun getElection(id: Int): LiveData<Election?>
 
     @Delete
     fun delete(election: Election)

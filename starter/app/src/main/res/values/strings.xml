@@ -4,5 +4,11 @@
 
     <string name="upcoming_elections">Upcoming Elections</string>
     <string name="find_my_representatives">Find my representatives</string>
+    <string name="txt_election_information">Election Information</string>
+    <string name="txt_follow_election">follow election</string>
+    <string name="txt_unfollow_election">unfollow election</string>
+    <string name="txt_correspondence_address">Correspondence Address</string>
+    <string name="txt_voting_locations">"<u>Voting Locations</u>"</string>
+    <string name="txt_ballot_information">"<u>Ballot Information</u>"</string>
 
 </resources>

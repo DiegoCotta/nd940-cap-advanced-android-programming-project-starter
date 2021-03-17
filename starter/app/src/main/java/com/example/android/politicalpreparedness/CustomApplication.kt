@@ -2,7 +2,7 @@ package com.example.android.politicalpreparedness
 
 
 import androidx.multidex.MultiDexApplication
-import com.example.android.politicalpreparedness.di.Module
+import com.example.android.politicalpreparedness.di.KoinModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -12,7 +12,7 @@ class CustomApplication : MultiDexApplication() {
         super.onCreate()
         startKoin {
             androidContext(this@CustomApplication)
-            modules(listOf(Module.getModule()))
+            modules(listOf(KoinModule.getModule()))
         }
     }
 }

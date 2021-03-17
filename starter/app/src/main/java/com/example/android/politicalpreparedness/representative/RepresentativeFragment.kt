@@ -1,4 +1,4 @@
-/*
+
 package com.example.android.politicalpreparedness.representative
 
 import android.content.Context
@@ -19,19 +19,19 @@ class DetailFragment : Fragment() {
 
     //TODO: Declare ViewModel
 
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
-        //TODO: Establish bindings
-
-        //TODO: Define and assign Representative adapter
-
-        //TODO: Populate Representative adapter
-
-        //TODO: Establish button listeners for field and location search
-
-    }
+//    override fun onCreateView(inflater: LayoutInflater,
+//                              container: ViewGroup?,
+//                              savedInstanceState: Bundle?): View? {
+//
+//        //TODO: Establish bindings
+//
+//        //TODO: Define and assign Representative adapter
+//
+//        //TODO: Populate Representative adapter
+//
+//        //TODO: Establish button listeners for field and location search
+//
+//    }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -49,6 +49,7 @@ class DetailFragment : Fragment() {
 
     private fun isPermissionGranted() : Boolean {
         //TODO: Check if permission is already granted and return (true = granted, false = denied/other)
+        return false
     }
 
     private fun getLocation() {
@@ -70,4 +71,4 @@ class DetailFragment : Fragment() {
         imm.hideSoftInputFromWindow(view!!.windowToken, 0)
     }
 
-}*/
+}

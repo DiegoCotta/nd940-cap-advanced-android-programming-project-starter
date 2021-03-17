@@ -80,14 +80,15 @@
             app:layout_constraintTop_toBottomOf="@id/city" />
 
         <!-- TODO: Add visual styling and label -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             app:layout_constraintTop_toBottomOf="@id/zip" />
 
         <!-- TODO: Add visual styling and content -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

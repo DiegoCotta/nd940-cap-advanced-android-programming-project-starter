@@ -5,8 +5,10 @@ import com.example.android.politicalpreparedness.database.ElectionDao
 import com.example.android.politicalpreparedness.network.CivicsApiService
 import com.example.android.politicalpreparedness.network.models.Election
 import com.example.android.politicalpreparedness.network.models.ElectionResponse
+import com.example.android.politicalpreparedness.network.models.VoterInfoResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.http.Query
 
 
 class ElectionRepositoryImpl constructor(
@@ -32,5 +34,15 @@ class ElectionRepositoryImpl constructor(
 
     override fun getSavedElections(): LiveData<List<Election>> =
         electionDao.getElections()
+
+    override fun getElection(electionId: Int): LiveData<Election?> =
+        electionDao.getElection(electionId)
+
+
+    override suspend fun getVoterInfo(address: String, electionId: Int): VoterInfoResponse =
+        withContext(Dispatchers.IO) {
+            service.getVoterInfo(address, electionId)
+        }
+
 
 }
