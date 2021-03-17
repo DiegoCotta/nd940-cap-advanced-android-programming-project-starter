@@ -4,7 +4,6 @@
     <dimen name="normal_margin">16dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="header_size">20sp</dimen>
-    <dimen name="button_min_height">32dp</dimen>
     <dimen name="header_text_size">16sp</dimen>
 
 

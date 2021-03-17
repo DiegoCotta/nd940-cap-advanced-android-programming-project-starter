@@ -8,6 +8,7 @@ import com.example.android.politicalpreparedness.network.models.Division
 import com.example.android.politicalpreparedness.network.models.Election
 import com.example.android.politicalpreparedness.repository.ElectionRepository
 import com.example.android.politicalpreparedness.repository.ElectionRepositoryImpl
+import com.example.android.politicalpreparedness.representative.RepresentativeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -22,5 +23,6 @@ object KoinModule {
 
         viewModel { ElectionsViewModel(get(), get()) }
         viewModel { (election: Election) -> VoterInfoViewModel(get(), election) }
+        viewModel { RepresentativeViewModel() }
     }
 }
