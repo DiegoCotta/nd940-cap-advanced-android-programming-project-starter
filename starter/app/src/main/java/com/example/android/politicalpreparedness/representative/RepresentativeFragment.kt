@@ -17,6 +17,7 @@ import com.example.android.politicalpreparedness.databinding.FragmentRepresentat
 import com.example.android.politicalpreparedness.databinding.FragmentVoterInfoBinding
 import com.example.android.politicalpreparedness.network.models.Address
 import com.example.android.politicalpreparedness.representative.RepresentativeFragment.Companion.REQUEST_LOCATION_PERMISSION
+import com.example.android.politicalpreparedness.representative.adapter.RepresentativeListAdapter
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -42,18 +43,20 @@ class RepresentativeFragment : Fragment() {
     ): View {
         binding = FragmentRepresentativeBinding.inflate(inflater)
         binding.lifecycleOwner = this
+        binding.viewModel = viewModel
 
         fusedLocationProviderClient =
             LocationServices.getFusedLocationProviderClient(requireActivity())
 
         checkLocationPermissions()
-        //TODO: Establish bindings
 
-        //TODO: Define and assign Representative adapter
+        binding.representativeList.adapter = RepresentativeListAdapter()
 
-        //TODO: Populate Representative adapter
-
-        //TODO: Establish button listeners for field and location search
+        binding.useMyLocationButton.setOnClickListener {
+            val address = geoCodeLocation(mLastKnownLocation!!)
+            viewModel.address.postValue(address)
+            viewModel.callGetRepresentative(address)
+        }
 
         return binding.root
     }

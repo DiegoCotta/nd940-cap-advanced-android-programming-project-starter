@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.android.politicalpreparedness.network.models.Address
 import com.example.android.politicalpreparedness.network.models.Election
 import com.example.android.politicalpreparedness.network.models.ElectionResponse
+import com.example.android.politicalpreparedness.network.models.RepresentativeResponse
 import com.example.android.politicalpreparedness.network.models.VoterInfoResponse
 
 interface ElectionRepository {
@@ -18,4 +19,6 @@ interface ElectionRepository {
     fun getElection(electionId: Int) : LiveData<Election?>
 
     suspend fun getVoterInfo(address: String, electionId: Int) : VoterInfoResponse
+
+    suspend fun getRepresentatives(address: String) : RepresentativeResponse
 }

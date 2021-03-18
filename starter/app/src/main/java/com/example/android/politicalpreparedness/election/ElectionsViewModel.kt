@@ -48,6 +48,4 @@ class ElectionsViewModel constructor(
         _navigateToVoterInfo.value = null
     }
 
-    //TODO: Create functions to navigate to saved or upcoming election voter info
-
 }

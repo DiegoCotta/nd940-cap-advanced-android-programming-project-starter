@@ -1,10 +1,11 @@
-package com.example.android.politicalpreparedness
+package com.example.android.politicalpreparedness.utils
 
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.politicalpreparedness.R
 import com.example.android.politicalpreparedness.election.adapter.ElectionListAdapter
 import com.example.android.politicalpreparedness.network.models.Election
 import java.text.SimpleDateFormat
@@ -27,7 +28,6 @@ fun bindAsteroidStatusImage(button: AppCompatButton, isFollow: Boolean) {
         button.setText(R.string.txt_unfollow_election)
     else
         button.setText(R.string.txt_follow_election)
-
 }
 
 @BindingAdapter("listData")

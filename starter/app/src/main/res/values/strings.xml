@@ -10,5 +10,16 @@
     <string name="txt_correspondence_address">Correspondence Address</string>
     <string name="txt_voting_locations">"<u>Voting Locations</u>"</string>
     <string name="txt_ballot_information">"<u>Ballot Information</u>"</string>
+    <string name="txt_representative_search">Representative Search</string>
+    <string name="txt_address_line_1">Address Line 1</string>
+    <string name="txt_address_line_2">Address Line 2</string>
+    <string name="txt_city">City</string>
+    <string name="txt_zip">Zip</string>
+    <string name="txt_use_my_location">Use my location</string>
+    <string name="my_representatives">My Representatives</string>
+    <string name="go_to_twitter">Open Representative Twitter</string>
+    <string name="go_to_facebook">Open Representative facebook</string>
+    <string name="go_to_website">Open Representative website</string>
+    <string name="representative_photo">Representative Photo</string>
 
 </resources>

@@ -23,6 +23,6 @@ object KoinModule {
 
         viewModel { ElectionsViewModel(get(), get()) }
         viewModel { (election: Election) -> VoterInfoViewModel(get(), election) }
-        viewModel { RepresentativeViewModel() }
+        viewModel { RepresentativeViewModel(get()) }
     }
 }
